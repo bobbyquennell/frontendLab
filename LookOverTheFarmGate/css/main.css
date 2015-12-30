@@ -155,7 +155,11 @@ div {
 
 div.content{
 
+<<<<<<< HEAD
         //border-style: dotted;
+=======
+        border-style: dotted;
+>>>>>>> 9211e685c6f0dc7bd6a76e05bf3eef21e1db8b37
         border-color: #fff;
         background: rgba(255,255,255,0.5);
 
