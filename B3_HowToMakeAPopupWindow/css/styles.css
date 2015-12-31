@@ -1,0 +1,71 @@
+
+
+
+
+html {
+    /* make a full page image background for the web page https://css-tricks.com/perfect-full-page-background-image/
+    */
+    /*background:url("../image/background.jpg");
+    background-repeat: no-repeat;
+    background-position:center center;    
+    background-attachment:fixed;*/
+    background: url(../image/background.jpg) no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+}
+h1,h2,h3,h4,p{
+    color: rgba(255,255,255,0.7);
+}
+
+.popup-container {
+   /****** method1: using background image with absolute positioning, width, height and z-index *******/
+   /* background: url("../image/pixel_black60.png") 0 0 repeat transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;*/
+    /****** method2: using background transparent color with fixed positioning, 100% width, 100% height and z-index *******/
+    display: none;
+    background-color:#000;
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    opacity: 0.6;
+    z-index: 1000;
+    
+    
+}
+.popup-content p {
+   display: inherit;
+    color: red;
+    font-size:30px;
+    opacity: 1.0;
+}
+
+.popup-content {
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 30%;
+    left: 33%;
+    background-color:goldenrod;
+}
+
+
+.popup-close {
+    position: absolute;
+    left:95%;
+}
+
+a.popup-close {
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+
