@@ -7,7 +7,6 @@ html {
     background-size: cover;*/
 }
 
-
 body {
     margin: 0 auto;
     /*padding: 2em 2em 4em;*/
@@ -79,6 +78,15 @@ img.icon{
     margin-left: 6%;
 }
 
+@media only screen  and (max-width:750px){
+img.icon {
+          max-height: 80px;
+    width: 80px;
+    display: block;
+    margin: 10px auto;
+    }
+}
+
 /*@-webkit-keyframes colorize {
     0% {
         -webkit-filter: grayscale(100%);
@@ -105,13 +113,14 @@ h2 img, h1 img {
 
 
 
-body section {
+section.content {
     margin-left: 10px;
     margin-right: 10px;
 }
 .slogan {
     max-height: 150%;
     width: 80%;
+    padding-top: 100px;
 }
 
 .heading {
@@ -191,13 +200,22 @@ footer {
 
 		@media screen and (max-width: 400px) { label {padding: 15px 10px;} }
 .btnTel {
-    background: #ed5a6a;
+    background: white;
     min-width: 180px;
-    color:#fff;
+    color: #286090;
     padding: 10px;
-     text-decoration: none;
+    text-decoration: none;
     margin: 0 0 0 0;
+    border-radius:10px;
+    box-shadow: 5px 6px 6px #888888;
     
+}
+a.btnTel:hover{
+    background-color: #ed5a6a;
+    color: white;
+}
+a.bthTel:active{
+    background-color: #ed5a6a;
 }
 
 
@@ -289,6 +307,8 @@ input[type="button"] {
     top: 30%;
     left: 39%;
     background: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    z-index: 1001;
 }
 
 
@@ -320,6 +340,23 @@ a.popup-close {
     .popup-content {
         width: 230px;
         left:21%;
-        //left:33%
+        //left:33%;
+        top:55%;
     }
+}
+#btnPopup {
+    border-radius: 10px;
+    background-color: white;
+    color: #286090
+}
+.popup-overlay{
+    display: none;
+    background-color:#000;
+    position:fixed;
+    width: 5000px;
+    height:5000px;
+    top: 0;
+    left:0;
+    opacity: 0.6;
+    z-index: 1000;
 }
