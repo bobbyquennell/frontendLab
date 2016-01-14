@@ -7,6 +7,7 @@ html {
     background-size: cover;*/
 }
 
+
 body {
     margin: 0 auto;
     /*padding: 2em 2em 4em;*/
@@ -16,18 +17,18 @@ body {
     font-size: 16px;
     line-height: 1.5em;
 
-
-
 }
+
+
 section.maincontent{
     
         /*color: #545454;*/
     /*//background-color: rbga(255,255,255,0.1);
-    //box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);*/
+    //box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);*
     background-color: #c1deec;
     //background-image: -webkit-linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
    // background-image: linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
-   // -webkit-font-smoothing: antialiased;
+   // -webkit-font-smoothing: antialiased;*/
     /*background: url(../images/Asset-Farm2.png)  no-repeat center;
     //background-size:cover;
     background-color: #c1deec;*/
@@ -78,7 +79,7 @@ img.icon{
     margin-left: 6%;
 }
 
-@-webkit-keyframes colorize {
+/*@-webkit-keyframes colorize {
     0% {
         -webkit-filter: grayscale(100%);
     }
@@ -94,7 +95,7 @@ img.icon{
     100% {
         filter: grayscale(0%);
     }
-}
+}*/
 
 h2 img, h1 img {
     max-height: 50px;
@@ -104,13 +105,13 @@ h2 img, h1 img {
 
 
 
-div {
-    
+body section {
+    margin-left: 10px;
+    margin-right: 10px;
 }
-
 .slogan {
     max-height: 150%;
-    width: 100%;
+    width: 80%;
 }
 
 .heading {
@@ -124,7 +125,7 @@ div {
     //position:fixed;
     //top:10px;
     background: url("../images/Asset-Cloud-Plane.png")  no-repeat center;
-    background-size:auto;
+    background-size:contain;
     background-color: #c1deec;
 }
 
@@ -175,7 +176,7 @@ footer {
 .content { color: #373737;}
 .content > div {display: none; padding: 20px 25px 5px;}
 
-		input[type="radio"] {display: none;}
+		/*input[type="radio"] {display: none;}*/
 		label {display: inline-block; padding: 15px 30px; font-weight: 600; text-align: center;}
 		label:hover {color: #fff; cursor: pointer;}
 		input:checked + label {background: rgba(255,255,255,0.5); color: #ed5a6a;    /*border-top-style: dotted; border-left-style: dotted;border-right-style: dotted;*/}
@@ -191,6 +192,7 @@ footer {
 		@media screen and (max-width: 400px) { label {padding: 15px 10px;} }
 .btnTel {
     background: #ed5a6a;
+    min-width: 180px;
     color:#fff;
     padding: 10px;
      text-decoration: none;
@@ -224,11 +226,17 @@ div.main{
 }
 a.btnTel {
     display: inline-block;
-    margin: 1em 0 1em 0;
+    margin: 1em 1em 1em 1em;
 }
 p.introduction {
-    margin:1.5em 1.5em;
-    padding: 1.5em 1.5em;
+    margin:10px 10px;
+    padding: 1px 15px;
+    font-family: 'Open Sans', sans-serif;
+    //font-family: 'Sue Ellen Francisco', cursive;
+    font-size:1.0em;
+    line-height: 1.5em;
+    
+    
 }
 
 input[type="button"] {
@@ -243,4 +251,75 @@ input[type="button"] {
     text-align: center;
 }
 
+///////////////////pop up//////////////////////////////
+/*.popup-container {
+   /****** method1: using background image with absolute positioning, width, height and z-index *******/
+   /* background: url("../image/pixel_black60.png") 0 0 repeat transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;*/
+    /****** method2: using background transparent color with fixed positioning, 100% width, 100% height and z-index *******
+    //display: none;
+    background-color:#000;
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    opacity: 0.6;
+    z-index: 1000;
+    
+    
+}*/
+.popup-content p {
+   display: inherit;
+    color: red;
+    font-size:30px;
+    opacity: 1.0;
+}
 
+.popup-content {
+    //width: 30%;
+    width: 235px;
+    //height: 30%;
+    position: absolute;
+    top: 30%;
+    left: 39%;
+    background: rgba(255,255,255,0.9);
+}
+
+
+.popup-close {
+    position: absolute;
+    left:95%;
+}
+
+a.popup-close {
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+///////////////////end pf pop up///////////////////////
+
+
+.popup-content p {
+    font-family: 'Sue Ellen Francisco', cursive;
+}
+
+@media only screen  and (max-width:780px){
+    .popup-content {
+        width: 230px;
+        //left:25%;
+        left:33%
+    }
+}
+@media only screen  and (max-width:450px) and (min-width:320px){
+    .popup-content {
+        width: 230px;
+        left:21%;
+        //left:33%
+    }
+}
