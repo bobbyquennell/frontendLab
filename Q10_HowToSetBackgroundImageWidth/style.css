@@ -1,0 +1,23 @@
+
+
+body{
+    color: white;
+}
+.box {
+    width:400px;
+    height: 400px;
+    overflow: hidden;
+    background-color: rgba(25,0,0, 0.3);
+    background-image: url('Asset-Farm.png');
+    background-repeat:no-repeat;
+    background-attachment: scroll;
+    background-position: 0% 20px;
+    background-size:400px;
+    /*https://developer.mozilla.org/en-US/docs/Web/CSS/background-size 
+    */
+    /*shorthand */
+    /*
+    background:color image repeat attachment position;
+    */
+}
+
