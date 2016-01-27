@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="http://jqueryvalidation.org/files/demo/site-demos.css">
+    </head>
+    <body>
+        <h4>Several ways to achieve this:</h4>
+<section id="general info">
+            <ul><li>
+            Using jQuery Validation Plugin
+            <ul><li><a href="http://jqueryvalidation.org/require_from_group-method/">click  here </a>for more details about <b>require from group method</b></li><li>
+                There are some <a href="http://stackoverflow.com/questions/15136943/jquery-validate-out-of-two-blank-fields-at-least-one-field-must-be-filled-or-b">tricks</a> about how to use jQuery Validation Plugin in ASP.NET
+            </li></ul>
+        </li><li>Using <a href="http://formvalidation.io/examples/requiring-at-least-one-field/">Formvalidation plug in</a><ul><li>this solution requires bootstrap or other frontend framworks</li></ul></li><li>
+            If in ASP.NET environment, using ValidationGroup 
+        </li></ul>
+</section>
+       <section id="example">
+          <h4>Below is a example of jquery plugin</h4>
+           <form id="myform">
+<label for="mobile_phone">Mobile phone: </label>
+<input class="left phone-group" id="mobile_phone" name="mobile_phone">
+<br/>
+<label for="home_phone">Home phone: </label>
+<input class="left phone-group" id="home_phone" name="home_phone">
+<br/>
+<label for="work_phone">Work phone: </label>
+<input class="left phone-group" id="work_phone" name="work_phone">
+<br/>
+<input type="submit" value="Validate!">
+</form>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+<script>
+// just for the demos, avoids form submit
+jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+});
+$( "#myform" ).validate({
+  rules: {
+    mobile_phone: {
+      require_from_group: [1, ".phone-group"]
+    },
+    home_phone: {
+      require_from_group: [1, ".phone-group"]
+    },
+    work_phone: {
+      require_from_group: [1, ".phone-group"]
+    }
+  }
+});
+</script>
+       </section>
+        
+    </body>
+</html>
